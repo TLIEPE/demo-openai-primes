@@ -1,5 +1,5 @@
 # Prime Numbers Calculation Script by TLIEPE
-# Showcase STRUCTURED OUTPUT LLM currently in beta at openai50
+# Showcase STRUCTURED OUTPUT LLM currently in beta at openai https://openai.com/index/introducing-structured-outputs-in-the-api/
 # Designed for macOS environment
 
 import os
