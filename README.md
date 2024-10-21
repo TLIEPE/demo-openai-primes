@@ -55,7 +55,7 @@ After setting up the virtual environment and installing the libraries, you're re
    ```
 3. Run the script:
    ```sh
-   python3 prime_numbers_script.py
+   python3 main.py
    ```
 
 ## Notes
