@@ -1,1 +1,16 @@
+# Virtuelle Umgebungen ausschließen
 macenv/
+venv/
+.env/
+
+# Python-spezifische Ausschlüsse
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Andere IDE- und Editor-spezifische Ausschlüsse
+.vscode/
+.idea/
+*.swp
