@@ -36,7 +36,10 @@ def get_prime_numbers_using_openai(limit):
             ],
             response_format=PrimeNumberResponse,
         )
-        return completion.choices[0].message.parsed.primes
+        primes = completion.choices[0].message.parsed.primes
+        # With GenAI, it can happen that a number exceeding the limit is returned (e.g., 5 for limit=3),
+        # so we filter out any numbers greater than the limit here.
+        return [p for p in primes if p <= limit]
     except Exception as e:
         print(f"Error using OpenAI API: {e}")
         return None
