@@ -1,9 +1,10 @@
 # Prime Numbers Calculation Script by TLIEPE
-# Showcase STRUCTURED OUTPUT LLM currently in beta at openai https://openai.com/index/introducing-structured-outputs-in-the-api/
+# Showcase STRUCTURED OUTPUT LLM using Instructor library (stable version) https://python.useinstructor.com/integrations/openai/
 # Designed for macOS environment
 
 import os
 import openai
+import instructor
 from pydantic import BaseModel
 import sympy
 
@@ -27,16 +28,16 @@ def ask_user_limit():
 
 def get_prime_numbers_using_openai(limit):
     try:
-        client = openai.OpenAI()
-        completion = client.beta.chat.completions.parse(
-            model="gpt-4o-mini",
+        client = instructor.from_openai(openai.OpenAI())
+        completion = client.chat.completions.create(
+            model="gpt-4o-2024-08-06",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant that generates prime numbers."},
                 {"role": "user", "content": f"Provide all prime numbers less than or equal to {limit} as a comma-separated list of integers."}
             ],
-            response_format=PrimeNumberResponse,
+            response_model=PrimeNumberResponse,
         )
-        primes = completion.choices[0].message.parsed.primes
+        primes = completion.primes
         # With GenAI, it can happen that a number exceeding the limit is returned (e.g., 5 for limit=3),
         # so we filter out any numbers greater than the limit here.
         return [p for p in primes if p <= limit]
