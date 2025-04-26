@@ -1,17 +1,19 @@
 # Prime Numbers Calculation Script by TLIEPE
 
 
+![GitHub Release (latest by date)](https://img.shields.io/github/v/release/TLIEPE/demo-openai-primes)
+![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+
 ## Versioning
 
 This project maintains two versions:
- 
-- **v1**: Uses OpenAI's beta feature for structured outputs (deprecated approach).
-- **v2**: Updated to use the stable Instructor library integration with OpenAI API for structured outputs.
 
-Version tags are available in the Git history for easy reference:
- 
-- `v1` - Original beta version
-- `v2` - Updated Instructor version
+- [v1 - Beta Structured Output Version](https://github.com/TLIEPE/demo-openai-primes/releases/tag/v1)
+- [v2 - Stable Structured Output Version](https://github.com/TLIEPE/demo-openai-primes/releases/tag/v2)
+
+Latest release: [v2 - Stable Instructor Version](https://github.com/TLIEPE/demo-openai-primes/releases/latest)
 
 
 ## Overview
