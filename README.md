@@ -1,7 +1,23 @@
 # Prime Numbers Calculation Script by TLIEPE
 
+
+## Versioning
+
+This project maintains two versions:
+ 
+- **v1**: Uses OpenAI's beta feature for structured outputs (deprecated approach).
+- **v2**: Updated to use the stable Instructor library integration with OpenAI API for structured outputs.
+
+Version tags are available in the Git history for easy reference:
+ 
+- `v1` - Original beta version
+- `v2` - Updated Instructor version
+
+
 ## Overview
 This script is a showcase of a new approach to generating **structured output** using OpenAI's beta capabilities for structured outputs in its API. The script demonstrates a comparison between prime numbers generated locally and those generated through the OpenAI API using structured outputs.
+
+**Important Update:** As OpenAI's structured output feature is currently in beta and subject to future changes, this project has been updated to use the stable approach with the Instructor library. This prevents issues when the beta API is deprecated ("sundown"). The original beta version is preserved in the repository history.
 
 The **structured output** capability of OpenAI helps ensure responses adhere to a defined format, validated using tools like Pydantic. In this case, it ensures a list of prime numbers is returned in a consistent manner.
 
@@ -59,8 +75,10 @@ After setting up the virtual environment and installing the libraries, you're re
    ```
 
 ## Notes
-- **Structured Output Beta Feature**: This script leverages OpenAI's beta feature for **structured outputs**, as detailed [here](https://openai.com/index/introducing-structured-outputs-in-the-api/).
+- **Structured Output Handling**: Initially, this project used OpenAI's beta feature for structured outputs. It now uses the Instructor library for a stable, production-ready approach. For details about the original beta feature, see [Structured Outputs Introduction](https://openai.com/index/introducing-structured-outputs-in-the-api/).
 - **MIT License**: This project is licensed under the MIT License, meaning you are free to use, modify, and distribute it as long as proper credit is given.
+
+- **Strict Mode Option**: OpenAI now supports a strict mode in structured output, ensuring perfect schema compliance. This project currently uses a relaxed mode for flexibility in examples. For critical applications, enabling `strict: true` is recommended to guarantee response schema adherence.
 
 ## License
 MIT License. See `LICENSE` for more details.
