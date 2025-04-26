@@ -56,9 +56,13 @@ To set up a virtual environment, follow these steps:
    ```sh
    source macenv/bin/activate
    ```
-5. Install the required libraries:
+5. Install the required libraries using the `requirements.txt` file:
    ```sh
-   pip install openai pydantic sympy
+   pip install -r requirements.txt
+   ```
+6. Or install the required libraries manuel:
+   ```sh
+   pip install openai instructor pydantic sympy
    ```
 
 After setting up the virtual environment and installing the libraries, you're ready to run the script.
@@ -85,4 +89,3 @@ MIT License. See `LICENSE` for more details.
 
 ## Contributing
 Feel free to open issues or submit pull requests if you'd like to contribute or have ideas for improving this project.
-
