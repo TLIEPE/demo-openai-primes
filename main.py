@@ -1,5 +1,5 @@
 # Prime Numbers Calculation Script by TLIEPE
-# Updated to use Instructor library with OpenAI API (strict structured output) https://python.useinstructor.com/integrations/openai/
+# Updated to use Instructor library with OpenAI API (STRICT structured output) https://python.useinstructor.com/integrations/openai/
 # Designed for macOS environment
 
 import os
