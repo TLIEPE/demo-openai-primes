@@ -6,14 +6,22 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
+## Current Version: v3
+
+This project now uses OpenAI's strict structured output mode. 
+This ensures that responses must fully comply with the expected data format. 
+If the model fails to deliver correct structured data, a clear error message (HTTP 400) is shown.
+
+
 ## Versioning
 
-This project maintains two versions:
+This project maintains multiple versions:
 
 - [v1 - Beta Structured Output Version](https://github.com/TLIEPE/demo-openai-primes/releases/tag/v1)
 - [v2 - Stable Structured Output Version](https://github.com/TLIEPE/demo-openai-primes/releases/tag/v2)
+- [v3 - Strict Structured Output Version](https://github.com/TLIEPE/demo-openai-primes/releases/tag/v3)
 
-Latest release: [v2 - Stable Instructor Version](https://github.com/TLIEPE/demo-openai-primes/releases/latest)
+Latest release: [v3 - Strict Structured Output Version](https://github.com/TLIEPE/demo-openai-primes/releases/latest)
 
 
 ## Overview
@@ -85,6 +93,8 @@ After setting up the virtual environment and installing the libraries, you're re
 - **MIT License**: This project is licensed under the MIT License, meaning you are free to use, modify, and distribute it as long as proper credit is given.
 
 - **Strict Mode Option**: OpenAI now supports a strict mode in structured output, ensuring perfect schema compliance. This project currently uses a relaxed mode for flexibility in examples. For critical applications, enabling `strict: true` is recommended to guarantee response schema adherence.
+
+- **Strict Mode Handling**: Version 3 introduces strict mode for structured outputs. This enforces exact schema validation. If the OpenAI model fails to generate a correct response, the script informs the user with a detailed error message instead of trying to recover or continuing silently.
 
 ## License
 MIT License. See `LICENSE` for more details.
